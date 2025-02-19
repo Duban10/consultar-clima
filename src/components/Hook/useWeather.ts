@@ -69,6 +69,7 @@ export default function useWeather() {
 
   const fetchWeather = async(search: SearchType) => {
       setLoading(true)
+      setNotFound(false)
       setWeather(initialState)
       try {
         const apiKey = import.meta.env.VITE_API_KEY
